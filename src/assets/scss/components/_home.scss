@@ -1,0 +1,103 @@
+.accordion {
+  .accordion-item {
+    background-color: transparent;
+    background-clip: unset;
+    border: none;
+    border-radius: 0;
+
+    .accordion-header {
+      .accordion-button {
+        border-bottom: 1px solid #d62e41;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:hover {
+          background-color: #d62e41 !important;
+          color: #fff;
+
+          &:before {
+            background-color: #fff !important;
+          }
+
+          &:after {
+            background-color: #fff !important;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 17px;
+          height: 1px;
+          top: 50%;
+          right: 15px;
+          position: absolute;
+          z-index: 1;
+          -webkit-transition: all 200ms linear;
+          transition: all 200ms linear;
+          background-color: #d62e41 !important;
+        }
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: 17px;
+          bottom: 50%;
+          margin-bottom: -9px;
+          right: 23px;
+          position: absolute;
+          z-index: 1;
+          -webkit-transition: all 200ms linear;
+          transition: all 200ms linear;
+          background-color: #d62e41 !important;
+        }
+
+        &[aria-expanded="true"]:after {
+          -ms-transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+
+        &:not(.collapsed) {
+          color: #212529;
+        }
+      }
+    }
+  }
+}
+
+.third-section-row {
+  --bs-gutter-x: 0 !important;
+
+  .third-section-col {
+    position: relative;
+    min-height: 1px;
+    padding: 0 15px;
+  }
+}
+
+.fif-six-section {
+  a {
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#concept-2 {
+  transition-duration:1s;
+  transition-delay:0.5s;
+}
+
+#concept-3 {
+  transition-duration:1s;
+  transition-delay:1s;
+}
+
+#accordion-2 {
+  transition-duration:1s;
+  transition-delay:0.7s;
+}
